@@ -17,7 +17,6 @@ public class HomePage extends PageBaseClass{
 
 	public HomePage(WebDriver driver, ExtentTest logger) {
 		super(driver, logger);
-		// TODO Auto-generated constructor stub
 	}
 
 	
@@ -30,13 +29,12 @@ public class HomePage extends PageBaseClass{
 	public WebElement searchb;
 	
 	@FindBy(xpath="//*[@id='container']/div/div[1]/div[1]/div[2]/div[2]/form/div/button")
-	//@FindBy(xpath="//li[contains(text(),'in')]//span")
 	public WebElement searchButton;
 	
 	
 	
 	
-	public ResultPage search(String searchvalue)  {
+	public SearchResultPage search(String searchvalue)  {
 
 		searchBox.sendKeys(searchvalue);
 		logger.log(Status.PASS, "Search value  " + searchvalue);
@@ -44,7 +42,7 @@ public class HomePage extends PageBaseClass{
 		searchButton.click();
 		logger.log(Status.PASS, "Search Button Clicked");
 	
-		ResultPage resultPage = new ResultPage(driver,logger);
+		SearchResultPage resultPage = new SearchResultPage(driver,logger);
 		
 		PageFactory.initElements(driver, resultPage);
 		

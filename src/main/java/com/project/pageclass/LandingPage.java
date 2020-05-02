@@ -32,10 +32,12 @@ public class LandingPage extends PageBaseClass{
 	public WebElement loginButton;
 	
 	
-	public HomePage loginUser(String userName, String password)
+	//public HomePage loginUser(String userName, String password)
+	public HomePage closePrompt()
 	{
 
 		close.click();
+		logger.log(Status.PASS, "Close the Popup");
 		
 		/*loginId.sendKeys(userName);
 		logger.log(Status.PASS, "Entered the UserName : " + userName);
@@ -45,8 +47,8 @@ public class LandingPage extends PageBaseClass{
 		
 		loginButton.click();
 		
-		*/
 		
+		*/
 		HomePage homePage = new HomePage(driver,logger);
 		PageFactory.initElements(driver, homePage);
 		return homePage;

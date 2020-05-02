@@ -14,7 +14,7 @@ import com.project.utils.ExtentReportManager;
 
 public class BaseTestClass {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	public ExtentReports report = ExtentReportManager.getReportInstance();
 	public ExtentTest logger;
 
@@ -28,11 +28,7 @@ public class BaseTestClass {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver");
 			driver = new ChromeDriver();
 
-			// } else {
-			// System.setProperty("webdriver.gecko.driver",
-			// System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver");
-			// driver = new FirefoxDriver();
-			// }}
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -46,11 +42,10 @@ public class BaseTestClass {
 	 * Create Report and Close broswer
 	 */
 	
-	//@AfterMethod
+	@AfterMethod
 	public void flushReports() {
-		//report.flush();
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
+		report.flush();
+		
 		driver.close();
 		driver.quit();
 	}

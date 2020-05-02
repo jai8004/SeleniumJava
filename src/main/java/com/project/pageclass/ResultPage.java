@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.project.baseclass.PageBaseClass;
 
 public class ResultPage extends PageBaseClass {
@@ -17,23 +18,44 @@ public class ResultPage extends PageBaseClass {
 	}
 	
 	
-	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div[2]/div/div[1]/div/div[1]/div/section[2]/div[4]/div[1]/select")
-	public WebElement min;
+	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div/a/div[2]/div[1]/div[1]")
+	WebElement firstResult;
 	
-	@FindBy(xpath="//*[@id='container']/div/div[3]/div[2]/div/div[2]/div[1]/div/div/div[2]/div[2]")
-	public WebElement pop;
+	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div[2]/div/div[2]/div[3]/div/div/div/a/div[2]/div[1]/div[1]")
+	WebElement secondResult;
 	
 	
-	public Max setMin() {
+	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div[2]/div/div[2]/div[4]/div/div/div/a/div[2]/div[1]/div[1]")
+	WebElement thirdResult;
+	
+	@FindBy(xpath="//*[@id='container']/div/div[3]/div[2]/div/div[2]/div[5]/div/div/div/a/div[2]/div[1]/div[1]")
+	WebElement fourthResult;
+	
+	@FindBy(xpath="//*[@id='container']/div/div[3]/div[2]/div/div[2]/div[6]/div/div/div/a/div[2]/div[1]/div[1]")
+	WebElement fifthResult;
+	
+	public void getResult() {
 		
-		Select minValue= new Select(min);
-		minValue.selectByValue("500");
+		logger.log(Status.INFO,"Getting Result");
 		
-		Max max = new Max(driver,logger);
-		PageFactory.initElements(driver, max);
+		System.out.println(firstResult.getText());
+		System.out.println(secondResult.getText());
+		System.out.println(thirdResult.getText());
+		System.out.println(fourthResult.getText());
+		System.out.println(fifthResult.getText());
 		
-		return max;
-		//*[@id="container"]/div/div[3]/div[2]/div/div[1]/div/div[1]/div/section[2]/div[4]/div[3]/select
+		
+		logger.log(Status.PASS, firstResult.getText());
+		logger.log(Status.PASS, secondResult.getText());
+		logger.log(Status.PASS, thirdResult.getText());
+		logger.log(Status.PASS, fourthResult.getText());
+		logger.log(Status.PASS, fifthResult.getText());
+		
 	}
+	
+	
+	
+	
+	
 
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.project.testclass.HeadPhonePriceCheck">
         <methods>
-          <include name="checkHeadPhones"/>
+          <include name="checkHeadPhones" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.project.testclass.HeadPhonePriceCheck -->
     </classes>
