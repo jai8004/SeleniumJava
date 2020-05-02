@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-03T04:40:25 IST" name="Default suite" finished-at="2020-05-03T04:41:16 IST" duration-ms="51148">
+  <suite started-at="2020-05-03T05:22:50 IST" name="Default suite" finished-at="2020-05-03T05:23:56 IST" duration-ms="65926">
     <groups>
     </groups>
-    <test started-at="2020-05-03T04:40:25 IST" name="Default test" finished-at="2020-05-03T04:41:16 IST" duration-ms="51148">
+    <test started-at="2020-05-03T05:22:50 IST" name="Default test" finished-at="2020-05-03T05:23:56 IST" duration-ms="65926">
       <class name="com.project.testclass.HeadPhonePriceCheck">
-        <test-method signature="checkHeadPhones(java.lang.String)[pri:0, instance:com.project.testclass.HeadPhonePriceCheck@1573f9fc]" started-at="2020-05-03T04:40:27 IST" name="checkHeadPhones" data-provider="testData" finished-at="2020-05-03T04:41:13 IST" duration-ms="45734" status="PASS">
+        <test-method signature="checkHeadPhones(java.lang.String)[pri:0, instance:com.project.testclass.HeadPhonePriceCheck@44c03695]" started-at="2020-05-03T05:22:51 IST" name="checkHeadPhones" data-provider="testData" finished-at="2020-05-03T05:23:47 IST" duration-ms="55368" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHeadPhones -->
-        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.project.testclass.HeadPhonePriceCheck@1573f9fc]" started-at="2020-05-03T04:41:14 IST" name="flushReports" finished-at="2020-05-03T04:41:16 IST" duration-ms="2565" status="PASS">
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.project.testclass.HeadPhonePriceCheck@44c03695]" started-at="2020-05-03T05:23:47 IST" name="flushReports" finished-at="2020-05-03T05:23:56 IST" duration-ms="9347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReports -->

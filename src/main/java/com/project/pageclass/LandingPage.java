@@ -1,6 +1,5 @@
 package com.project.pageclass;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,53 +9,25 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.project.baseclass.PageBaseClass;
 
-public class LandingPage extends PageBaseClass{
+public class LandingPage extends PageBaseClass {
 
 	public LandingPage(WebDriver driver, ExtentTest logger) {
-		// TODO Auto-generated constructor stub
-		super(driver,logger);
+		super(driver, logger);
 	}
-		
+
+	// creating web element of close promt button
 	@FindBy(xpath = "/html/body/div[2]/div/div/button")
 	public WebElement close;
-	
-	
-	
-	@FindBy(xpath="//div[@class='_1XBjg- row']//form//input[@type='text']")
-	public WebElement loginId;
-	
-	@FindBy(xpath="//div[@class='_1XBjg- row']//form//input[@type='password']")
-	public WebElement loginPassword;
 
-	@FindBy(xpath="//div[@class='_1XBjg- row']//form//button[@type='submit']")
-	public WebElement loginButton;
-	
-	
-	//public HomePage loginUser(String userName, String password)
-	public HomePage closePrompt()
-	{
+	// clsoe the promt fucntion call
+	public HomePage closePrompt() {
 
 		close.click();
 		logger.log(Status.PASS, "Close the Popup");
-		
-		/*loginId.sendKeys(userName);
-		logger.log(Status.PASS, "Entered the UserName : " + userName);
-		
-		loginPassword.sendKeys(password);
-		logger.log(Status.PASS, "Entered the Password : " + password);
-		
-		loginButton.click();
-		
-		
-		*/
-		HomePage homePage = new HomePage(driver,logger);
+		HomePage homePage = new HomePage(driver, logger);
 		PageFactory.initElements(driver, homePage);
 		return homePage;
-		
+
 	}
-	
-	
-	
-	
-	
+
 }

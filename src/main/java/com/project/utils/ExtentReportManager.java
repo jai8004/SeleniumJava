@@ -7,10 +7,11 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 
 public class ExtentReportManager {
 	
-	//public static ExtentHtmlReporter htmlReporter;
 		public static ExtentReports report;
 		
 		public static ExtentReports getReportInstance(){
+			
+			// generating the report 
 			
 			if(report == null){
 				String reportName = DateUtils.getTimeStamp() + ".html";

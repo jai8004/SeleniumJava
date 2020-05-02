@@ -23,21 +23,25 @@ public class PageBaseClass extends BaseTestClass {
 	public PageBaseClass(WebDriver driver, ExtentTest logger) {
 		this.driver = driver;
 		this.logger = logger;
-		}
+	}
 
 	/*
 	 * Open Flipkar WebSite
 	 */
 	public LandingPage OpenApplication() {
-	logger.log(Status.INFO, "Open Flipkart Site");
-	driver.get("https://www.flipkart.com/");
-	logger.log(Status.PASS, "Successfully Opened the flipkart Site");
+		logger.log(Status.INFO, "Open Flipkart Site");
+		driver.get("https://www.flipkart.com/");
+		logger.log(Status.PASS, "Successfully Opened the flipkart Site");
 
 		LandingPage landingPage = new LandingPage(driver, logger);
 		PageFactory.initElements(driver, landingPage);
 		return landingPage;
 	}
-	
+
+	/*
+	 * Take Screen Shot and Save in the Screen Shot folder Integrate screen shot
+	 * with report log
+	 */
 	public void takeScreenShot() {
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File sourceFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
@@ -53,6 +57,5 @@ public class PageBaseClass extends BaseTestClass {
 		}
 
 	}
-
 
 }

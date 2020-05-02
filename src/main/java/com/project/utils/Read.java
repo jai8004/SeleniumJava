@@ -10,6 +10,8 @@ public class Read {
 
 	public static String ReadExcel() throws IOException
 	{
+		
+		// read the data from excel
 		String data;
 		String Path = System.getProperty("user.dir") + "/TestData/Mobile.xlsx";
 		FileInputStream readfile=new FileInputStream(Path);
